@@ -1,50 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"> <!-- Set this to the main language of your site -->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Tasked - a simple to-do list app for iPhone</title>
+	
+	<!-- Enter a brief description of your page -->
+	<meta name="description" content="Tasked is a simple to-do list app. Create, sort, mark, delete. Tasked uses the built-in reminders functionality of iOS with a simple, colourful design to give you a back to basics approach for your to-do lists.">
+	
+	<!-- Define a viewport to mobile devices to use - telling the browser to assume that the page is as wide as the device (width=device-width) and setting the initial page zoom level to be 1 (initial-scale=1.0) -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Add normalize.css which enables browsers to render all elements more consistently and in line with modern standards as it only targets particular styles that need normalizing -->
+	<link href="css/normalize.css" rel="stylesheet" media="all">
+	<!-- For legacy support (IE 6/7, Firefox < 4, and Safari < 5) use normalize-legacy.css instead -->
+	<!--<link href="css/normalize-legacy.css" rel="stylesheet" media="all">-->
+	
+	<!-- Include the site stylesheet -->
+	<link href="css/styles.css" rel="stylesheet" media="all">
+	
+	<!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
+	<!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Tasked : " />
+	<!-- include jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<!-- include Cycle2 -->
+	<script src="js/jquery.cycle2.min.js"></script>
 
-    <title>Tasked</title>
-  </head>
 
-  <body>
+</head>
+<body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/blork/Tasked">View on GitHub</a>
+	<header role="banner">
+		<img src="img/icon.png">
+		<h1>Tasked</h1>
+		<h3>A simple to-do list for iPhone</h3>
+	</header>
+	
+	
+	<main role="main">
 
-          <h1 id="project_title">Tasked</h1>
-          <h2 id="project_tagline"></h2>
+		<section>
+			<div class="cycle-wrapper"> 
+				<div class="cycle-slideshow" 
+				data-cycle-timeout="4000"
+				data-cycle-pause-on-hover="true"
+				data-cycle-prev="#prev"
+				data-cycle-next="#next"
+				>
+					<img src="img/1.png">
+					<img src="img/2.png">
+					<img src="img/3.png">
+					<img src="img/4.png">
+				</div>	
+				<div class="buttons">
+					<a href=# id="prev"><<</a> | <a href=# id="next">>></a>
+				</div>
+			</div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/blork/Tasked/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/blork/Tasked/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+			<article>
+			<h3>Create, sort, mark, delete.</h3>
+			<div id="first">
+				<p>
+					Tasked uses the built-in reminders functionality of iOS with a simple, colourful design to give you a back to basics approach for your to-do lists.
+				</p>
+				<a href="https://itunes.apple.com/app/id790342486"><img src="img/appStore_Btn.png" alt="Download App" /></a>
+			</div>
+			<hr />
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="another-simple-to-do-app" class="anchor" href="#another-simple-to-do-app"><span class="octicon octicon-link"></span></a>(Another) Simple To-Do App</h1>
-      </section>
-    </div>
+			<h3>Features</h3>
+			<ul>
+				<li>Create new lists and new tasks.</li>
+				<li>Quickly strike things off your list, or use batch editing to mark several in one go.</li>
+				<li>Share important list items.</li>
+				<li>Read and edit each task's notes.</li>
+				<li><a href="">URL scheme support</a>.</li>
+				<li>Your tasks are automatically synced to any devices with Reminders enabled - iPhone, iPad, or Mac.</li>
+			</ul>
+			<hr />
+			</article>
+		</section>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Tasked maintained by <a href="https://github.com/blork">blork</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+	</main>
+			
+	<footer role="contentinfo">
+		<small>Copyright &copy; <time datetime="2013">2013</time> <a href="http://www.sam-oakley.co.uk">Sam Oakley</a></small>
+	</footer>
+	
+	<!-- Google Analytics - Optimized version by Mathias Bynens -->
+	<!-- See: http://mathiasbynens.be/notes/async-analytics-snippet -->
+	<!-- Change the UA-XXXX-XX string to your site's ID -->
+	<script>
+		var _gaq=[['_setAccount','UA-XXXX-XX'],['_trackPageview']];(function(a,b){var c=a.createElement(b),d=a.getElementsByTagName(b)[0];c.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";d.parentNode.insertBefore(c,d)})(document,"script");
+	</script>
+	
+</body>
 </html>
